@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.UUID;
 
 import com.eventostec.api.domain.address.Address;
+import com.eventostec.api.domain.coupon.Coupon;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

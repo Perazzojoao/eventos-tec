@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eventostec.api.domain.coupon.Coupon;
 import com.eventostec.api.domain.coupon.CouponRequestDTO;
+import com.eventostec.api.domain.coupon.CouponResponseDTO;
 import com.eventostec.api.service.CouponService;
 
 import java.util.List;
@@ -32,8 +33,8 @@ public class CouponController {
   }
 
   @PostMapping("/event/{eventId}")
-  public ResponseEntity<Coupon> addCouponsToEvent(@PathVariable UUID eventId, @RequestBody CouponRequestDTO body) {
-    Coupon coupon = couponService.createCoupon(eventId, body);
+  public ResponseEntity<CouponResponseDTO> addCouponsToEvent(@PathVariable UUID eventId, @RequestBody CouponRequestDTO body) {
+    CouponResponseDTO coupon = couponService.createCoupon(eventId, body);
 
     return ResponseEntity.ok(coupon);
   }
